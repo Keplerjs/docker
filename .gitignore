@@ -1,0 +1,6 @@
+bundle
+node_modules
+datadb
+static
+kepler.env
+packages

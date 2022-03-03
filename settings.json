@@ -1,0 +1,131 @@
+{
+	"admin": {
+		"emailOnNewUser": false,
+		"adminsAutoFriendship": true,
+		"adminUsers": ["admin"]
+	},
+	"public": {
+		"map": {
+			"center": [41.047801, 12.0885],
+			"layers": {
+                "road": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                "landscape": "https://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=<YOUR API KEY>",
+                "satellite": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+            }
+		},
+		"accounts": {
+	        "creation":true
+        },
+		"categories": {
+			"cats": {
+				"place": {
+					"car": true,
+					"house": true,
+					"bus": false,
+					"parking": false
+				}
+			}
+		},
+		"templates": {
+			"panelPlace": {
+				"panelPlace_edit": true,
+				"popupCursor_share": true,
+				"panelPlace_share": {"order": -10}
+			},
+			"popupCursor": {
+				"popupCursor_share":true
+			}
+		},
+		"accounts": {
+			"services": {
+				"google": false,
+				"github": false,
+				"twitter": false,
+				"facebook": true,
+				"instagram": true,
+				"openstreetmap": false
+			},
+			"ui": {
+				"passwordSignupFields": "USERNAME_AND_OPTIONAL_EMAIL"
+			}
+		},
+		"upload": {
+			"maxFileSize": 100000000,
+			"targets": {
+				"photos_avatars": {
+					"url": "/static/avatars/"
+				},
+				"photos_places": {
+					"url": "/static/photos/",
+					"maxFileSize": 100000000
+				},
+				"import_places": {
+					"maxFileSize": 100000000
+				}
+			}
+		},
+	    "ga": {
+	      "id": "${GA_ID}"
+	    }
+	},
+	"upload": {
+		"targets": {
+			"photos_avatars": {
+				"url": "/static/avatars/",
+				"path": "/kepler/static/avatars/"
+			},
+			"photos_places": {
+				"url": "/static/photos/",
+				"path": "/kepler/static/photos/"
+			}
+		}
+	},
+	"stats": {
+		"apiHeaders": {
+			 "Access-Control-Allow-Origin": "*"
+		}
+	},
+	"geoinfo": {
+		"autoupdate": true,		
+		"geonamesUser": "${GEOINFO_GEONAMES_USER}",
+		"ipinfodbKey": "${GEOINFO_IPINFODB_KEY}"
+	},
+	"weather": {
+		"wundergroundKey": "${WEATHER_WUNDERGROUND_KEY}"
+	},
+    "openrouteservice": {
+		"name": "${OPENROUTESERVICE_NAME}",
+		"key": "${OPENROUTESERVICE_KEY}"
+	},
+	"accounts": {
+		"verifyEmail": false,
+		"emailTemplates": {
+			"from": "${ACCOUNTS_EMAILTEMPLATES_FROM}"
+		},
+		"github": {
+			"service": "github",
+			"clientId": "${ACCOUNTS_GITHUB_CLIENTID}",
+			"secret": "${ACCOUNTS_GITHUB_SECRET}"
+		},
+		"facebook": {
+			"service": "facebook",
+			"appId": "${ACCOUNTS_FACEBOOK_APPID}",
+			"secret": "${ACCOUNTS_FACEBOOK_SECRET}"
+		},
+		"google": {
+			"service": "google",
+			"clientId": "${ACCOUNTS_GOOGLE_CLIENTID}",
+			"secret": "${ACCOUNTS_GOOGLE_SECRET}"
+		},
+		"twitter": {
+			"service": "twitter",
+			"consumerKey": "${ACCOUNTS_TWITTER_CONSUMERKEY}",
+			"secret": "${ACCOUNTS_TWITTER_SECRET}"
+		},
+		"openstreetmap": {
+			"service": "openstreetmap",
+			"consumerKey": "${ACCOUNTS_OPENSTREETMAP_CONSUMERKEY}",
+			"secret": "${ACCOUNTS_OPENSTREETMAP_SECRET}"
+		}
+	}	
+}

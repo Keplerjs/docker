@@ -1,0 +1,8 @@
+bundle*
+node_modules
+Dockerfile
+.git/
+*log
+kepler.env
+static
+datadb
